@@ -1,0 +1,3 @@
+# Discord Bot!
+
+This is a basic bot that doesn't do much at the moment...
