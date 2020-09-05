@@ -1,16 +1,20 @@
 {
-  "name": "discordbot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "pharmabot",
+  "version": "1.1.0",
+  "description": "A bot made for the Pharma Club",
   "main": "bot.js",
   "scripts": {
     "watch": "tsc -w",
     "dev": "nodemon dist/bot.js",
     "start": "node dist/bot.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "discord",
+    "bot",
+    "pharmacy"
+  ],
+  "author": "Hamza Sayyid",
+  "license": "MIT",
   "dependencies": {
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0"
