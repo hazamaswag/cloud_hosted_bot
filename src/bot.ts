@@ -29,12 +29,17 @@ client.on("message", async (message) => {
       .substring(PREFIX.length)
       .split(/\s+/);
 
-    console.log(CMD_NAME);
     if (CMD_NAME === "member" && !args.length) {
       await message.channel
         .send(
           "https://docs.google.com/forms/d/e/1FAIpQLSeG8PhqKS4LYcNdrEn58OFgI6jw_C0VsPC_NyNXptIQnPiCQg/viewform"
         )
+        .catch((error) => message.channel.send(error));
+    }
+
+    if (CMD_NAME === "secret" && !args.length) {
+      await message.channel
+        .send("ssshhhh!!! It's a secret (:")
         .catch((error) => message.channel.send(error));
     }
   }
