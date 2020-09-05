@@ -8,6 +8,9 @@ client.on("ready", () => {
   console.log(`${client.user?.tag} has logged in`);
 });
 
+const do_something = (x: number) => {
+  return x ** 3;
+};
 // sends a dm to the new member!
 client.on("guildMemberAdd", async (member) => {
   const guild = member.guild;
@@ -40,6 +43,12 @@ client.on("message", async (message) => {
     if (CMD_NAME === "secret" && !args.length) {
       await message.channel
         .send("ssshhhh!!! It's a secret (:")
+        .catch((error) => message.channel.send(error));
+    }
+
+    if (CMD_NAME === "num" && args.length === 1) {
+      await message.channel
+        .send(`${args[0]} cubed is: ${do_something(+args[0])}`)
         .catch((error) => message.channel.send(error));
     }
   }
